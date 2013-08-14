@@ -1,0 +1,26 @@
+<select onchange="play(this.value)">
+	<option>公司大楼门口</option>
+	<option>孩子</option>
+	<option>开车</option>
+	<option>开车1</option>
+	<option>开车2</option>
+	<option>钱塘江1</option>
+	<option>钱塘江2</option>
+	<option>楼下</option>
+</select>
+<br/>
+<img id="img" width=320 height=240/>
+
+<script>
+
+function play(dir,time){
+	window.clearInterval(window.interVal);
+	var img = document.getElementById("img");
+	var i=0;
+	window.interVal = window.setInterval(function(){
+		img.src="http://127.0.0.1/开车1/capture"+i+".jpeg";
+		i++;
+	},80);
+}
+
+</script>

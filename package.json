@@ -1,0 +1,19 @@
+{
+    "main": "app.js",
+	"name": "kanjia",
+  	"version": "0.0.1",
+  	"private": true,
+  	"scripts": {
+    	"start": "node app.js"
+	},
+	"dependencies": {
+		"canvas":"*",
+		"express": "3.3.4",
+		"ejs": "*",
+		"xml2js" : "0.2.6",
+		"weixin-api" : ">=0.1.6",
+		"ejs": "*",
+		"socket.io": "*"
+	}
+}
+

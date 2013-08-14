@@ -1,0 +1,34 @@
+<select id="time">
+	<option value="200">一般</option>
+	<option value="100" selected>快</option>
+	<option value="50">特快</option>
+	<option value="25">极快</option>
+</select>
+<select id="dir">
+	<option>pic</option>
+	<option>公司大楼门口</option>
+	<option>开车1</option>
+	<option>开车2</option>
+	<option>钱塘江1</option>
+	<option>钱塘江2</option>
+	<option>楼下</option>
+</select>
+<button  onclick="play()">播放</button>
+<br/>
+<img id="img" width=320 height=240/>
+
+<script>
+
+function play(dir,time){
+	var time = document.getElementById("time").value;
+	var dir = document.getElementById("dir").value;
+	window.clearInterval(window.interVal);
+	var img = document.getElementById("img");
+	var i=0;
+	window.interVal = window.setInterval(function(){
+		img.src="/"+dir+"/capture"+i+".jpeg";
+		i++;
+	},time);
+}
+
+</script>
